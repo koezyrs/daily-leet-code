@@ -12,6 +12,7 @@ public:
         int sum = 0;              // Number of people can reveal the secret in i'th day
         int res = 1;              // Number of people know the secret in i'th day
         dp[1] = 1;
+
         for (int day = 2; day <= n; day++)
         {
             if (day > delay)

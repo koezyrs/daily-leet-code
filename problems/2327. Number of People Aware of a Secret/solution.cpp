@@ -8,8 +8,8 @@ class Solution
 public:
     int peopleAwareOfSecret(int n, int delay, int forget)
     {
-        long long res = 0;
         vector<vector<int>> dp = vector<vector<int>>(n + 1, vector<int>(forget + 1, 0));
+        int res = 0;
         dp[1][1] = 1;
 
         for (int day = 2; day <= n; day++)
