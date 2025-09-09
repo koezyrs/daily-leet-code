@@ -8,9 +8,9 @@ class Solution
 public:
     int peopleAwareOfSecret(int n, int delay, int forget)
     {
-        int dp[1001] = {0};
-        int sum = 0;
-        int res = 1;
+        vector<int> dp(n + 1, 0); // Number of people findout the secret in i'th day
+        int sum = 0;              // Number of people can reveal the secret in i'th day
+        int res = 1;              // Number of people know the secret in i'th day
         dp[1] = 1;
         for (int day = 2; day <= n; day++)
         {
@@ -35,6 +35,6 @@ int main()
     Solution sol;
     // 4, 1, 3
     // 6, 2, 4
-    cout << sol.peopleAwareOfSecret(6, 2, 4) << endl;
+    cout << sol.peopleAwareOfSecret(4, 1, 3) << endl;
     return 0;
 }
